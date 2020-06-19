@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="apple-mobile-web-app-title" content="微拍堂"/><meta name="format-detection" content="telephone=no"/><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/><meta http-equiv="Pragma" content="no-cache"/><meta http-equiv="Expires" content="0"/><meta name="renderer" content="webkit"/><meta name="force-rendering" content="webkit"/><meta name="theme-color" content="#000000"/><title>微拍堂</title><link rel="stylesheet" href="/public/normalize.css/8.0.1/normalize.min.css"/><script>var publicPath = '/';</script><style>html,
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        margin: 0 auto;
+        width: 7.5rem;
+        max-width: 7.5rem;
+        font-size: 12px;
+        line-height: initial;
+      }</style></head><body><script>!(function () {
+        var $html = document.querySelector('html');
+        function setRem() {
+          var clientWidth = $html.clientWidth;
+          clientWidth = Math.min(clientWidth, 640);
+          $html.style.fontSize = clientWidth / 7.5 + 'px';
+          var div = document.createElement('div');
+          div.style.width = '7.5rem';
+          document.body.appendChild(div);
+          $html.style.fontSize = ($html.style.fontSize.replace('px', '') * clientWidth) / div.clientWidth + 'px';
+          document.body.removeChild(div);
+        }
+        var b = null;
+        window.addEventListener(
+          'resize',
+          function () {
+            clearTimeout(b);
+            b = setTimeout(setRem, 300);
+          },
+          !1
+        );
+        setRem();
+      })(window);</script><script src="//public/react/16.13.1/react.production.min.js"></script><script src="/public/react-dom/16.13.1/react-dom.production.min.js"></script><script src="/runtime.js"></script><script src="/vendors.js"></script><script src="/common.js"></script><script src="/pages/recycle-view/index.js"></script></body></html>
